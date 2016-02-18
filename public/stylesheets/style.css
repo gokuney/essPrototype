@@ -1,0 +1,59 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #114b5f;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#loginBody{
+
+
+}
+
+#loginRegisterBox md-whiteframe{
+background: #dde7c7;
+}
+
+#loginRegisterBox{
+
+	background: #edeec9;
+	height:100%;
+	position: relative;
+
+}
+
+.landing-logo {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.landing-logo img{
+	width:30%;
+}
+
+#landing-tabs{
+	background: #dde7c7;
+}
+
+.md-content.md-default-theme, md-content{
+	background: #dde7c7;
+}
+
+
+#homeBody{
+	/*background: #edeec9;*/
+}
+
+.ui-accordion .ui-accordion-content {
+    border-top: 0 none;
+    margin-left: -13px;
+    overflow-x: hidden;
+    padding: 5px 14px;
+}
+
+.ui-accordion-content{
+	height:auto!important;
+}

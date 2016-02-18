@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html ng-app="ess">
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- SCRIPTS -->
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.js"></script>
+	<script src="/bower_components/angular-aria/angular-aria.js"></script>
+	<script src="/bower_components/angular-messages/angular-messages.js"></script>
+	<script src="/bower_components/angular-material/angular-material.js"></script>
+	<script src="/javascripts/loginScript.js"></script>
+	<script src="/javascripts/script.js"></script>
+
+    <!-- STYLES -->
+	<style>
+		@import url('/bower_components/angular-material/angular-material.layouts.css');
+		@import url('/bower_components/angular-material/angular-material.css');
+	</style>
+
+
+
+  </head>
+  <body id="loginBody">
+    {{{body}}}
+
+<div  ng-controller="loginController">
+
+ 	
+	
+
+	<div id="loginRegisterBox" class="windowHeight"  layout="row" layout-align="center center">
+	
+	
+	<md-whiteframe class="md-whiteframe-2dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="30" layout layout-align="center center">
+
+
+
+
+<div ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom md-align-tabs="bottom" id="landing-tabs">
+      <md-tab label="Login">
+
+
+	<div class="landing-logo">
+		<span>
+			<img src="/images/login.png" alt="">
+		</span>
+	</div>
+
+
+        <md-content class="md-padding">
+          
+          <form action="" name="loginForm" class="go-form" id="registration-form">
+          	
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Email</label>
+            <input ng-model="user.firstName" required />
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Password</label>
+            <input name="password" type="password" required/>
+          </md-input-container>
+
+
+          <md-input-container class="md-block" flex-gt-sm>
+            
+            <md-button  class="md-raised md-warn" style="width:100%" type="submit">Login</md-button>
+            
+          </md-input-container>
+
+		 
+
+
+          </form>
+
+        </md-content>
+      </md-tab>
+      <md-tab label="Register">
+        <md-content class="md-padding">
+		
+		<div class="landing-logo">
+		<span>
+			<img src="/images/register.png" alt="">
+		</span>
+	</div>
+
+		<form action="" name="registerationForm" class="go-form">
+          	
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>First Name</label>
+            <input name="firstname" type="text" required/>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Middle Name</label>
+            <input name="middlename" type="text" required/>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Last Name</label>
+            <input name="lastname" type="text" required/>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>EmployeeID</label>
+            <input name="employeeID" required ng-pattern="/[0-9]/" type="text" />
+            <div ng-messages="registerationForm.employeeID.$error" role="alert" multiple>
+              <div ng-message="required" class="my-message">You must supply a valid Employee ID</div>
+              <div ng-message="pattern" class="my-message">Only digits are allowed
+              </div>
+            </div>
+          </md-input-container>
+
+          
+
+		 <md-input-container class="md-block" flex-gt-sm>
+		
+			<md-select ng-model="levels" placeholder="Select Level" required>
+            
+              <md-option>
+                Level 1
+              </md-option>
+
+              <md-option>
+                Level 2
+              </md-option>
+
+              <md-option>
+                Level 3
+              </md-option>
+
+              <md-option>
+                Level 4
+              </md-option>
+
+
+            
+            </md-select>
+
+        </md-input-container>
+
+
+		
+		<md-input-container class="md-block" flex-gt-sm>
+            
+            <md-button  class="md-raised md-warn" style="width:100%" type="submit">Register</md-button>
+            
+          </md-input-container>
+		 
+
+
+        </form>          
+
+        </md-content>
+      </md-tab>
+      
+    </md-tabs>
+  </md-content>
+</div>
+
+
+
+    </md-whiteframe>
+
+	</div>
+
+
+
+</div>
+
+  </body>
+</html>

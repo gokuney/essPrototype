@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html ng-app="ess">
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- SCRIPTS -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/libraries/jqui/jquery-ui.min.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular/angular.route.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.js"></script>
+	<script src="/bower_components/angular-aria/angular-aria.js"></script>
+	<script src="/bower_components/angular-messages/angular-messages.js"></script>
+	<script src="/bower_components/angular-material/angular-material.js"></script>
+	<script src="/javascripts/homeScript.js"></script>
+	<script src="/javascripts/script.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+
+    <!-- STYLES -->
+	<style>
+		@import url('/bower_components/angular-material/angular-material.layouts.css');
+    @import url('/bower_components/angular-material/angular-material.css');
+    @import url('/libraries/font-awesome/css/font-awesome.min.css');
+    @import url('/libraries/jqui/jquery-ui.min.css');
+		@import url('/libraries/jqui/jquery-ui.theme.min.css');
+
+    .md-content.md-default-theme, md-content{
+      background: transparent;
+    }
+	</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+ 
+
+  </head>
+  <body id="homeBody">
+    
+    <div layout="row" layout-xs="column">
+      
+<div flex="100">
+
+
+<div  ng-cloak>
+  <md-fab-toolbar md-open="false" count=""
+                  md-direction="left">
+    <md-fab-trigger class="align-with-text">
+      <md-button aria-label="menu" class="md-fab md-primary" id="help-bar">
+        <md-icon md-svg-src="/images/icons/essential-ui-12-64494.svg"></md-icon>
+      </md-button>
+    </md-fab-trigger>
+    <md-toolbar>
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button aria-label="comment" class="md-icon-button">
+          <md-icon md-svg-src="/images/icons/essential-ui-16-64498.svg"></md-icon>
+        </md-button>
+        <md-button href="/" aria-label="label" style="width:150px;" class="md-icon-button">
+        
+        <md-icon  md-svg-src="/images/icons/essential-ui-15-64497.svg"></md-icon>
+          Logout
+        </md-button>
+
+        <md-icon md-svg-src="/images/icons/essential-ui-88-64606.svg"></md-icon>
+          Contact
+        </md-button>
+
+        <md-button aria-label="photo" class="md-icon-button">
+          <md-icon md-svg-src="/images/login.png"></md-icon>
+        </md-button>
+      </md-fab-actions>
+    </md-toolbar>
+  </md-fab-toolbar>
+  
+</div>
+
+</div>
+
+    </div>
+
+        
+
+<div ng-controller="AppCtrl" layout="column" style="height:auto;" ng-cloak>
+<md-button hide-gt-md style="position:absolute;left:0px;top:0px;" aria-label="menu" class="md-fab md-primary" id="help-bar" ng-click="toggleLeft()">
+        <md-icon md-svg-src="/images/icons/essential-ui-29-64511.svg"></md-icon>
+      </md-button>
+
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      
+            <md-card>
+        <md-card-header>
+          <md-card-avatar>
+            <img src="/images/login.png"/>
+          </md-card-avatar>
+          <md-card-header-text>
+            <span class="md-title">John Doe</span>
+            <span class="md-subhead">Web Developer</span>
+          </md-card-header-text>
+        </md-card-header>
+        
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">ESS | Portal</span>
+          </md-card-title-text>
+        </md-card-title>
+        
+      </md-card>
+
+      
+      <!-- LIST MENU ITEMS -->
+        
+        <div>
+
+<div id="accordion">
+  
+  <h3>Administration</h3>
+  <div>
+    <md-button href="#/tutorial" style="width:100%;" class=" md-default">Tutorial</md-button>
+    <md-button href="#/view-employee-details" style="width:100%;" class=" md-default">View Employee Details</md-button>
+    
+    
+  </div>
+
+    <h3>Resources</h3>
+  <div>
+    <md-button href="#/resources" style="width:100%;" class=" md-default">All Resources</md-button>
+    <md-button href="#/resource1" style="width:100%;" class=" md-default">Resource 1</md-button>
+
+    <md-button href="#/resource2" style="width:100%;" class=" md-default">Resource 2</md-button>
+    
+  </div>
+
+
+  
+  </div>
+
+        </div>
+    </md-sidenav>
+
+    <md-content flex layout-padding>
+      <div layout="column" layout-fill>
+        
+<div ng-view>
+             
+           </div>
+
+      </div>
+      <div flex>
+        
+      </div>
+    </md-content>
+    
+  </section>
+</div>
+
+
+
+        </div>
+
+
+
+
+          </div>
+
+          
+        </div>
+
+  </body>
+</html>
